@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react';
 import PropTypes from 'prop-types';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
