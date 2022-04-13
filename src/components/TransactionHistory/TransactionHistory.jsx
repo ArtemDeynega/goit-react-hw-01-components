@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import { TransactionHistoryItem } from '.';
+import { Table, Title } from './TransactionHistory.styled';
 export const TransactionHistory = ({ items }) => {
   return (
-    <table className="transactionHistory">
+    <Table>
       <thead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <Title>Type</Title>
+          <Title>Amount</Title>
+          <Title>Currency</Title>
         </tr>
       </thead>
       <tbody>
@@ -20,10 +21,17 @@ export const TransactionHistory = ({ items }) => {
           />
         ))}
       </tbody>
-    </table>
+    </Table>
   );
 };
 
 TransactionHistory.propTypes = {
-  items: PropTypes.array.isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ),
 };
