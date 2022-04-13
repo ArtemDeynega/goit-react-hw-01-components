@@ -12,18 +12,15 @@ export const Item = styled.li`
   list-style: none;
 `;
 
-export const IsOnline = styled.span`
+export const Status = styled.span`
   display: block;
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: chartreuse;
-`;
-
-export const IsOfline = styled.span`
-  display: block;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: crimson;
+  background-color: ${({ online }) => {
+    if (!online) {
+      return 'crimson';
+    }
+    return 'chartreuse';
+  }};
 `;
