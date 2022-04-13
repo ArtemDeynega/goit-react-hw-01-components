@@ -1,6 +1,7 @@
-@import-normalize; /* bring in normalize.css styles */
+import { createGlobalStyle } from 'styled-components';
 
-/* body {
+export const GlobalStyle = createGlobalStyle`
+body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -41,4 +42,7 @@ td {
   margin: 0;
   padding: 0;
   list-style: none;
-} */
+}
+
+
+`;
