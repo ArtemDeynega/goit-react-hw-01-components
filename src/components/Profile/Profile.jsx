@@ -21,18 +21,18 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
       </Description>
 
       <Stats>
-        <ListItem>
+        <li>
           <Item>Followers</Item>
           <Item>{stats.followers}</Item>
-        </ListItem>
-        <ListItem>
+        </li>
+        <li>
           <Item>Views</Item>
           <Item>{stats.views}</Item>
-        </ListItem>
-        <ListItem>
+        </li>
+        <li>
           <Item>Likes</Item>
           <Item>{stats.likes}</Item>
-        </ListItem>
+        </li>
       </Stats>
     </Container>
   );

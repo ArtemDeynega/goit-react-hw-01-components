@@ -50,5 +50,5 @@ export const Item = styled.span`
   margin-left: 10px;
 `;
 export const ListItem = styled.li`
-  list-style: none;
+  /* list-style: none; */
 `;
