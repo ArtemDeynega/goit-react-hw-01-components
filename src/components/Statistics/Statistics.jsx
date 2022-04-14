@@ -10,7 +10,7 @@ export const Statistics = ({ title, stats }) => {
   return (
     <>
       <StatisticsContainer>
-        {title ? <Title>{title}</Title> : ''}
+        {title && <Title>{title}</Title>}
 
         <StatList>
           {stats.map(data => (
